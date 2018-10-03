@@ -2,39 +2,72 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="26"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="FIELD_REMOVED"
     plugin-version="3.1.4"
-    timestamp="1538555028544"
+    timestamp="1538599656192"
     token="-945413655183916451"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="5533" />
+        duration="3242" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="78" />
+        duration="100" />
     <task
         name="verifier"
-        duration="8" />
+        duration="45" />
 
     <artifact
         location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\resources\instant-run\debug\resources-debug.apk"
         type="SPLIT" />
     <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
         location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\instant-run-apk\debug\presentation-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1538554521129"
+        ir-eligibility="FIELD_REMOVED"
+        timestamp="1538599656192"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\resources\instant-run\debug\resources-debug.apk"
@@ -43,10 +76,10 @@
             location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -75,56 +108,6 @@
         <artifact
             location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\instant-run-apk\debug\presentation-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1538554707010"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\instant-run-apk\debug\presentation-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1538555028544"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mrrok\AndroidStudioProjects\LoginApp\presentation\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>

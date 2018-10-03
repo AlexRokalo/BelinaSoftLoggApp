@@ -3,14 +3,12 @@ package alex.mrrok.data.net
 import  alex.mrrok.data.entity.Error
 import alex.mrrok.data.Internet_connection_is_not_available
 import alex.mrrok.data.REST_API_URL
-import alex.mrrok.data.Unknown_error
+import alex.mrrok.data.Validation_error
 import alex.mrrok.data.entity.ErrorType
 import alex.mrrok.data.entity.UserRegistration
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import io.reactivex.Completable
-import io.reactivex.CompletableSource
-import io.reactivex.Observable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -60,8 +58,9 @@ class BalinasoftService : BalinasoftApi {
 
     private fun onErrorResumeNext(t: Throwable): Completable {
         val error = when (t) {
-            is UnknownHostException -> Error(Internet_connection_is_not_available, ErrorType.INTERNET_IS_NOT_AVAILABLE)
-            else -> Error(Unknown_error, ErrorType.UNKNOWN_ERROR)
+            is UnknownHostException ->
+                Error(Internet_connection_is_not_available, ErrorType.INTERNET_IS_NOT_AVAILABLE)
+            else -> Error(Validation_error, ErrorType.VALIDATE_ERROR)
         }
         return Completable.error(error)
     }

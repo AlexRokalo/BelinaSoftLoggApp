@@ -33,7 +33,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
     @NonNull
     public final android.support.v7.widget.AppCompatEditText inputPassword;
     @NonNull
-    public final android.support.v4.widget.NestedScrollView scrollIndicatorUp;
+    public final android.support.v4.widget.NestedScrollView root;
     // variables
     @Nullable
     private alex.mrrok.loginapp.presentation.screens.loginactivity.LoginViewModel mViewModel;
@@ -126,8 +126,8 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
         this.inputEmail.setTag(null);
         this.inputPassword = (android.support.v7.widget.AppCompatEditText) bindings[2];
         this.inputPassword.setTag(null);
-        this.scrollIndicatorUp = (android.support.v4.widget.NestedScrollView) bindings[0];
-        this.scrollIndicatorUp.setTag(null);
+        this.root = (android.support.v4.widget.NestedScrollView) bindings[0];
+        this.root.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

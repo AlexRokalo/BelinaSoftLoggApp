@@ -19,7 +19,7 @@ open class BaseRouter<A : BaseActivity>(private var activity: A) {
         val error = t as Error
         when (error.errorType) {
             ErrorType.INTERNET_IS_NOT_AVAILABLE -> Toast.makeText(activity, "Internet is not available!", Toast.LENGTH_LONG).show()
-            else -> Toast.makeText(activity, "Internet is not available!", Toast.LENGTH_LONG).show()
+            else -> Toast.makeText(activity, "Validate error", Toast.LENGTH_LONG).show()
         }
     }
 

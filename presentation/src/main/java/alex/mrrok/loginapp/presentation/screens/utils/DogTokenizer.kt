@@ -10,7 +10,7 @@ import android.widget.MultiAutoCompleteTextView
 class DogTokenizer : MultiAutoCompleteTextView.Tokenizer {
     override fun findTokenEnd(text: CharSequence?, cursor: Int): Int {
         var i = cursor
-        while (i > 0 && text!![i - 1] != '@') {
+        while (i > 1 && text!![i - 1] != '@') {
             i--
         }
         while (i < cursor && text!![i] == '@') {
@@ -22,7 +22,7 @@ class DogTokenizer : MultiAutoCompleteTextView.Tokenizer {
 
     override fun findTokenStart(text: CharSequence?, cursor: Int): Int {
         var i = cursor
-        while (i > 0 && text?.get(i - 1) !== '@' && text?.get(i - 1) !== '\n') {
+        while (i > 1 && text?.get(i - 1) !== '@' && text?.get(i - 1) !== '\n') {
             i--
         }
         while (i < cursor && (text?.get(i) === '@' || text?.get(i) === '\n')) {
@@ -37,10 +37,10 @@ class DogTokenizer : MultiAutoCompleteTextView.Tokenizer {
         Log.e("terminateToken", "WOrk")
         var i = text?.length!!
 
-        while (i > 0 && text[i - 1] == '@') {
+        while (i > 1 && text[i - 1] == '@') {
             i--
         }
-        if (!(i <= 0 || text[i - 1] != '@')) {
+        if (!(i <= 1 || text[i - 1] != '@')) {
             return text;
         } else {
             if (text is Spannable) {

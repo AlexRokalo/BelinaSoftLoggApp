@@ -12,15 +12,15 @@
            
 
     <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scrollIndicatorUp"
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:background="@drawable/bg" android:tag="layout/activity_login_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        android:background="@drawable/bg"
+        android:fillViewport="true" android:tag="layout/activity_login_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/BeltSoftLogo"
@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
                 android:src="@drawable/logo"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

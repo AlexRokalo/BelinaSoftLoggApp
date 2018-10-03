@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "alex.mrrok.loginapp"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //View
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    //noinspection GradleCompatible
+    implementation "com.android.support:design:$supportVersion"
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintVersion"
+
+    //Binding
+    annotationProcessor "com.android.databinding:compiler:$bindingVersion"
+    kapt "com.android.databinding:compiler:$bindingVersion"
+
+    // MVVM
+    implementation "android.arch.lifecycle:extensions:$archVersion"
+    implementation "android.arch.lifecycle:viewmodel:$archVersion"
+
+    //RxJava(Kotlin)
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    implementation project(path: ':data')
+}
+
+
+repositories {
+    mavenCentral()
+}

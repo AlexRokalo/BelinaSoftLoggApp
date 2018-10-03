@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="alex.mrrok.loginapp.presentation.screens.loginactivity.LoginViewModel" />
+
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollIndicatorUp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@drawable/bg">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/BeltSoftLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/emailTextView"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/input_email"
+                app:layout_constraintStart_toStartOf="@+id/input_email" />
+
+
+            <android.support.v7.widget.AppCompatMultiAutoCompleteTextView
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/helvetica"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:text="@={viewModel.email}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:theme="@style/TextInputEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BeltSoftLogo" />
+
+
+            <TextView
+                android:id="@+id/Password"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/passwordTexView"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/input_password"
+                app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:alpha="0.7"
+                android:drawableEnd="@drawable/ic_view"
+                android:fontFamily="@font/helvetica"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:text="@={viewModel.password}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:theme="@style/TextInputEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Password" />
+
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_gradient"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/registration"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_password"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>
